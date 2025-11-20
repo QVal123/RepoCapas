@@ -28,6 +28,7 @@
             $sql="insert into categoria (nombre) values (:nom)";
             $ps=$cn->prepare($sql); 
             $ps->bindParam(':nom', $categoria->getNombre());
+            $ps->bindParam(':nom', $categoria->getIdFam());
             $ps->execute();
             }
         public function borrar($idcat){

@@ -12,6 +12,7 @@
         <hr>
         <form action="" method="post">
             <input type="text" name="txtNom" placeHolder="Ingrese Nombre">
+            <input type="text" name="txtIdFam" placeHolder="Ingrese IdFamilia">
             <br>
             <input type="submit" value="Guardar">
         </form>
@@ -26,6 +27,7 @@
     if($_POST){
         $cat=new Categoria();
         $cat->setNombre($_POST['txtNom']);
+        $cat->setIdFamilia($_POST['txtIdFam']);
         $log=new LCategoria();
         $log->guardar($cat);
         header('Location: cargarcategorias.php');
