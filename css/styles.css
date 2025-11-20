@@ -105,6 +105,10 @@ a {
     font-weight: bold;
 }
 
+a {
+    margin-left: 20px;
+}
+
 a:hover {
     text-decoration: underline;
 }
