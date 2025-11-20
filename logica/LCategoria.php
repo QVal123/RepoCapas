@@ -25,10 +25,10 @@
         public function guardar(Categoria $categoria){ //
             $db=new DB();
             $cn=$db->conectar();
-            $sql="insert into categoria (nombre) values (:nom)";
+            $sql="insert into categoria (nombre, idfamilia) values (:nom, :idfam)";
             $ps=$cn->prepare($sql); 
             $ps->bindParam(':nom', $categoria->getNombre());
-            $ps->bindParam(':nom', $categoria->getIdFam());
+            $ps->bindParam(':idfam', $categoria->getIdFamilia());
             $ps->execute();
             }
         public function borrar($idcat){
