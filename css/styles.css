@@ -1,0 +1,114 @@
+/* ======== ESTILO GENERAL ======== */
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffeef7; /* rosado pastel muy suave */
+    margin: 0;
+    padding: 0;
+    color: #4a4a4a;
+}
+
+/* ======== CONTENEDOR CENTRAL ======== */
+.container {
+    width: 90%;
+    max-width: 550px;
+    background: #ffffff;
+    margin: 35px auto;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
+    border: 2px solid #fcd9ef; /* borde rosado pastel */
+}
+
+/* ======== TITULOS ======== */
+h1, h2, h3 {
+    color: #d994c6; /* rosa pastel suave */
+    text-align: center;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* ======== FORMULARIOS ======== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, select {
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid #cfe9ff; /* celeste pastel */
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s ease;
+    background: #ffffff;
+}
+
+input:focus, select:focus {
+    border-color: #a7d8ff; /* celeste pastel más fuerte */
+    box-shadow: 0px 0px 8px rgba(167,216,255,0.5);
+}
+
+/* ======== BOTONES ======== */
+button, input[type="submit"] {
+    padding: 12px;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #f7bde8, #b7e3ff); 
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+
+button:hover, input[type="submit"]:hover {
+    filter: brightness(1.08);
+    transform: scale(1.03);
+}
+
+/* ======== TABLAS ======== */
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #fcd9ef;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+th {
+    background: #f7c7e7; /* rosa pastel */
+    color: #ffffff;
+    padding: 12px;
+    font-size: 15px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ffe5f5;
+    text-align: center;
+}
+
+tr:hover {
+    background: #fdf3ff; /* rosita super suave */
+}
+
+/* ======== LINKS ======== */
+a {
+    text-decoration: none;
+    color: #a7d8ff; /* celeste pastel */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+

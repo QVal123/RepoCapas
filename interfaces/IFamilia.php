@@ -4,5 +4,6 @@
         //Definimos nuestras firmas de métodos
         public function cargar();
         public function guardar(Familia $familia);
+        public function borrar($idfam);
     }
 ?>

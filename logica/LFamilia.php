@@ -30,5 +30,22 @@
             $ps->bindParam(':des', $familia->getDescripcion());
             $ps->execute();
         }
+        public function borrar($idfam){
+            $db = new DB();
+            $cn = $db->conectar();
+            $sql = "DELETE FROM familia WHERE idfamilia = ?";
+            $ps = $cn->prepare($sql);
+            $ps->execute([$idfam]);
+        }
+        public function modificar(Familia $familia){
+            $db = new DB();
+            $cn = $db->conectar();
+            $sql = "UPDATE familia SET nombre = :nom, descripcion = :des WHERE idFamilia = :idfam";
+            $ps = $cn->prepare($sql);
+            $ps->bindParam(':nom', $familia->getNombre());
+            $ps->bindParam(':des', $familia->getDescripcion());
+            $ps->bindParam(':idfam', $familia->getIdFamilia());
+            $ps->execute();
+    }
     }
 ?>

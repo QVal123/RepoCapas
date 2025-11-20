@@ -8,11 +8,10 @@
 </head>
 <body>
     <div>
-        <h1>Inserción de Familias</h1>
+        <h1>Inserción de Categorias</h1>
         <hr>
         <form action="" method="post">
             <input type="text" name="txtNom" placeHolder="Ingrese Nombre">
-            <input type="text" name="txtDes" placeHolder="Ingrese Descripción">
             <br>
             <input type="submit" value="Guardar">
         </form>
@@ -21,15 +20,14 @@
 </html>
 
 <?php
-    require_once '../entidades/Familia.php';
-    require_once '../interfaces/IFamilia.php';
-    require_once '../logica/LFamilia.php';
+    require_once '../entidades/Categoria.php';
+    require_once '../interfaces/ICategoria.php';
+    require_once '../logica/LCategoria.php';
     if($_POST){
-        $fam=new Familia();
-        $fam->setNombre($_POST['txtNom']);
-        $fam->setDescripcion($_POST['txtDes']);
-        $log=new LFamilia();
-        $log->guardar($fam);
-        header('Location: cargarfamilias.php');
+        $cat=new Categoria();
+        $cat->setNombre($_POST['txtNom']);
+        $log=new LCategoria();
+        $log->guardar($cat);
+        header('Location: cargarcategorias.php');
     }
 ?>

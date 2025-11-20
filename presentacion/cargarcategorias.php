@@ -8,38 +8,37 @@
 </head>
 <body>
     <div>
-        <h1>Módulo de Familias</h1>
+        <h1>Módulo de Categorias</h1>
         <hr>
-        <a href="guardarfamilia.php">Crear Nuevo</a>
+        <a href="guardarcategoria.php">Crear Nuevo</a>
         <?php
-            require_once '../entidades/Familia.php';
-            require_once '../interfaces/IFamilia.php';
-            require_once '../logica/LFamilia.php';
-            $log=new LFamilia();
-            $familias= $log->cargar();
+            require_once '../entidades/Categoria.php';
+            require_once '../interfaces/ICategoria.php';
+            require_once '../logica/LCategoria.php';
+            $log=new LCategoria();
+            $categorias= $log->cargar();
         ?>
         <table border='1'>
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Nombre</th>
-                    <th>Descripción</th>
+                    <th>IdFamilia</th>
                     <th>Modificar</th>
                     <th>Borrar</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                    foreach($familias as $fam){
+                    foreach($categorias as $cat){
                 ?> 
                 <tr>
-                    <td><?=$fam->getIdFamilia()?></td>
-                    <td><?=$fam->getNombre()?></td>
-                    <td><?=$fam->getDescripcion()?></td>
+                    <td><?=$cat->getIdCategoria()?></td>
+                    <td><?=$cat->getNombre()?></td>
+                    <td><?=$cat->getIdFamilia()?></td>
 
-                    <td><a href="modificarfamilia.php">Modificar</a></td>
-                    <td><a href="borrarfamilia.php?idfam=<?=$fam->getIdFamilia()?>">Borrar</a></td>
-
+                    <td><a href="modificarcategoria.php">Modificar</a></td>
+                    <td><a href="borrarcategorias.php?idcat=<?=$cat->getIdCategoria()?>">Borrar</a></td>
                 </tr>
                 <?php
                     }       
