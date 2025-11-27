@@ -38,18 +38,5 @@
             $ps = $cn->prepare($sql);
             $ps->execute([$idcat]);
         }
-        public function modificar(Categoria $categoria){
-            $db = new DB();
-            $cn = $db->conectar();
-            $sql = "UPDATE categoria SET nombre = :nom, idfamilia = :idfam WHERE idCategoria = :idcat";
-            $ps = $cn->prepare($sql);
-            $nom = $categoria->getNombre();
-            $idfam = $categoria->getIdFamilia();
-            $idcat = $categoria->getIdCategoria();
-            $ps->bindParam(':nom', $nom);
-            $ps->bindParam(':idfam', $idfam);
-            $ps->bindParam(':idcat', $idcat);
-            $ps->execute();
-    }
     }
 ?>

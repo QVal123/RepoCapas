@@ -39,20 +39,6 @@
             $ps = $cn->prepare($sql);
             $ps->execute([$idcli]);
         }
-        public function modificar(Cliente $cliente){
-            $db = new DB();
-            $cn = $db->conectar();
-            $sql = "UPDATE cliente SET nombres = :nom, apellidos = :ape, dni = :dni  WHERE idCliente = :idcli";
-            $ps = $cn->prepare($sql);
-            $nom = $cliente->getNombre();
-            $ape = $cliente->getApellidos();
-            $dni = $cliente->getDNI();
-            $id  = $cliente->getIdCliente();
-            $ps->bindParam(':nom', $nom);
-            $ps->bindParam(':ape', $ape);
-            $ps->bindParam(':dni', $dni);
-            $ps->bindParam(':idcli', $id);
-            $ps->execute();
-        }
+        
     }
 ?>
